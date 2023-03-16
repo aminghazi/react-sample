@@ -6,7 +6,8 @@ export default class Counter extends Component {
         super(props)
         
         this.state = {
-            counter: 0
+            counter: 0,
+            counterColor: 'red'
         }
 
         this.add = this.add.bind(this)
@@ -16,7 +17,8 @@ export default class Counter extends Component {
     add() {
         this.setState(previousState => {
             return {
-                counter: previousState.counter + 1
+                counter: previousState.counter + 1,
+                counterColor: previousState.counter+1 === 0 ? 'red' : 'black'
             }
         })
     }
@@ -24,7 +26,8 @@ export default class Counter extends Component {
     minus() {
         this.setState(previousState => {
             return {
-                counter: previousState.counter - 1
+                counter: previousState.counter - 1,
+                counterColor: previousState.counter-1 === 0 ? 'red' : 'black'
             }
         })
     }
@@ -33,7 +36,7 @@ export default class Counter extends Component {
         return (
             <div className="Counter-content">
                 <button onClick={this.minus}>Minus</button>
-                <div>{this.state.counter}</div>
+                <div className={`${this.state.counterColor}`}>{this.state.counter}</div>
                 <button onClick={this.add}>Plus</button>
             </div>
         )
