@@ -3,8 +3,13 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
+}
+
+.App-title {
+  font-size: 1.4rem;
+  color: #61dafb;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,9 +20,10 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +41,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+nav ul {
+  line-height: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: start;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+button {
+  background-color: #61dafb;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .7;
+  transition: .3s;
 }

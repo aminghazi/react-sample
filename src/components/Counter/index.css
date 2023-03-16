@@ -1,0 +1,8 @@
+.Counter-content {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    grid-auto-flow: column;
+}
