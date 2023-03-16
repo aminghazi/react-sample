@@ -10,7 +10,6 @@ export default class Counter extends Component {
             counterColor: 'red'
         }
 
-        this.add = this.add.bind(this)
         this.minus = this.minus.bind(this)
     }
 
@@ -37,7 +36,8 @@ export default class Counter extends Component {
             <div className="Counter-content">
                 <button onClick={this.minus}>Minus</button>
                 <div className={`${this.state.counterColor}`}>{this.state.counter}</div>
-                <button onClick={this.add}>Plus</button>
+                <button onClick={() => this.add()}>Plus</button>
+                {/* <button onClick={this.add.bind(this)}>Plus</button> */}
             </div>
         )
     }

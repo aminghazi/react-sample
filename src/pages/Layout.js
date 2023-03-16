@@ -15,6 +15,12 @@ const Layout = () => {
             <li>
               <Link to="/counter">Counter</Link>
             </li>
+            <li>
+              <Link to="/event">Event</Link>
+            </li>
+            <li>
+              <Link to="/notification-counter">Notification Counter</Link>
+            </li>
           </ul>
         </nav>
 

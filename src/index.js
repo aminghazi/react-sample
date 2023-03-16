@@ -9,6 +9,8 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Counter from './pages/Counter';
+import Event from './pages/Event';
+import NotificationCounter from './pages/NotificationCounter';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -20,7 +22,9 @@ root.render(
         
       </Route>
       <Route path="/" element={<LayoutRoot />}>
-        <Route path="Counter" element={<Counter />} />
+        <Route path="counter" element={<Counter />} />
+        <Route path="event" element={<Event />} />
+        <Route path="notification-counter" element={<NotificationCounter />} />
       </Route>
     </Routes>
   </Router>

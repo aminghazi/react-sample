@@ -79,3 +79,7 @@ button:hover {
 .black {
   color: black;
 }
+
+.gray-bg {
+  background-color: #d2d2d2;
+}
