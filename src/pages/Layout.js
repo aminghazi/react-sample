@@ -21,6 +21,9 @@ const Layout = () => {
             <li>
               <Link to="/notification-counter">Notification Counter</Link>
             </li>
+            <li>
+              <Link to="/form">Form</Link>
+            </li>
           </ul>
         </nav>
 

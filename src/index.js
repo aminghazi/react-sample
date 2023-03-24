@@ -11,6 +11,7 @@ import reportWebVitals from './reportWebVitals';
 import Counter from './pages/Counter';
 import Event from './pages/Event';
 import NotificationCounter from './pages/NotificationCounter';
+import Form from './pages/Form';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -25,6 +26,7 @@ root.render(
         <Route path="counter" element={<Counter />} />
         <Route path="event" element={<Event />} />
         <Route path="notification-counter" element={<NotificationCounter />} />
+        <Route path="form" element={<Form />} />
       </Route>
     </Routes>
   </Router>
