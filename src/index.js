@@ -12,6 +12,7 @@ import Counter from './pages/Counter';
 import Event from './pages/Event';
 import NotificationCounter from './pages/NotificationCounter';
 import Form from './pages/Form';
+import Quiz from './pages/Quiz';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -27,6 +28,7 @@ root.render(
         <Route path="event" element={<Event />} />
         <Route path="notification-counter" element={<NotificationCounter />} />
         <Route path="form" element={<Form />} />
+        <Route path="quiz" element={<Quiz />} />
       </Route>
     </Routes>
   </Router>
