@@ -24,7 +24,7 @@ export default class Form extends Component {
             submitted: true
         })
 
-        if (this.state.name !== 0 && this.state.email !== 0) {
+        if (this.state.name !== "" && this.state.email !== "") {
             this.setState({
                 validForm: true
             })
