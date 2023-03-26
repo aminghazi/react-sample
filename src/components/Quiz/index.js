@@ -10,25 +10,25 @@ export default class Quiz extends Component {
                 {
                     questionText: "Question 1",
                     answerOptions: [
-                        { text: "1", isCorrect: false },
-                        { text: "2", isCorrect: true },
-                        { text: "3", isCorrect: false },
+                        { id: 1, text: "1", isCorrect: false },
+                        { id: 2, text: "2", isCorrect: true },
+                        { id: 3, text: "3", isCorrect: false },
                     ],
                 },
                 {
                     questionText: "Question 2",
                     answerOptions: [
-                        { text: "1", isCorrect: true },
-                        { text: "2", isCorrect: false },
-                        { text: "3", isCorrect: false },
+                        { id: 1, text: "1", isCorrect: true },
+                        { id: 2, text: "2", isCorrect: false },
+                        { id: 3, text: "3", isCorrect: false },
                     ],
                 },
                 {
                     questionText: "Question 3",
                     answerOptions: [
-                        { text: "1", isCorrect: false },
-                        { text: "2", isCorrect: true },
-                        { text: "3", isCorrect: false },
+                        { id: 1, text: "1", isCorrect: false },
+                        { id: 2, text: "2", isCorrect: true },
+                        { id: 3, text: "3", isCorrect: false },
                     ],
                 }
             ],
@@ -71,13 +71,13 @@ export default class Quiz extends Component {
                         <div>
                             <h2>{this.state.questions[this.state.currectQuestion].questionText}</h2>
                             {this.state.questions[this.state.currectQuestion].answerOptions.map(answer => ( 
-                                <>
+                                <div key={answer.id}>
                                     <button onClick={this.clickHandler.bind(this, answer.isCorrect)}>
                                         {answer.text}
                                     </button>
                                     <br/>
                                     <br/>
-                                </>
+                                </div>
                             ))}
                         </div>
                     </div>)
