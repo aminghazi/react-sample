@@ -30,6 +30,9 @@ const Layout = () => {
             <li>
               <Link to="/select">Select</Link>
             </li>
+            <li>
+              <Link to="/method-as-props">Method As Props</Link>
+            </li>
           </ul>
         </nav>
 

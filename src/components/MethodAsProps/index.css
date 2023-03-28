@@ -1,0 +1,11 @@
+.MethodAsProps-content {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+span {
+    margin-left: 10px;
+}
