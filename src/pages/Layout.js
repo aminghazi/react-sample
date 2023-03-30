@@ -33,6 +33,12 @@ const Layout = () => {
             <li>
               <Link to="/method-as-props">Method As Props</Link>
             </li>
+            <li>
+              <Link to="/table">Table</Link>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
+            </li>
           </ul>
         </nav>
 
