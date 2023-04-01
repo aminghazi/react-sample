@@ -17,6 +17,7 @@ import Select from './pages/Select';
 import MethodAsProps from './pages/MethodAsProps';
 import Table from './pages/Table';
 import Cart from './pages/Cart';
+import TodoList from './pages/TodoList';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -37,6 +38,7 @@ root.render(
         <Route path="method-as-props" element={<MethodAsProps />} />
         <Route path="table" element={<Table />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="todolist" element={<TodoList />} />
       </Route>
     </Routes>
   </Router>

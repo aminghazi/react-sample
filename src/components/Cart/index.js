@@ -23,11 +23,16 @@ export default class Cart extends Component {
     }
 
     addToCart(id) {
-        let addProduct = this.state.products.find(p => {
-            return p.id === id
+        let addProduct = this.state.products.find(p => p.id === id)
+
+        let uniqueProduct = this.state.addProduct.filter(p => {
+            return this.state.shoppingCart.indexOf(p.id) === p
         })
 
+        console.log("uniqueProduct", uniqueProduct)
+
         this.setState(prevState => { 
+            console.log("prevState", prevState.indexOf)
             return {
                 shoppingCart: [...prevState.shoppingCart, addProduct]
             }
