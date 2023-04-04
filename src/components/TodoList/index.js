@@ -14,6 +14,7 @@ export default class TodoList extends Component {
         }
 
         this.todoTitleHandler = this.todoTitleHandler.bind(this)
+        this.addTodo = this.addTodo.bind(this)
     }
 
     todoTitleHandler(event) {
@@ -40,8 +41,8 @@ export default class TodoList extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.addTodo}>
+            <>
+                <form onSubmit={this.addTodo} autoComplete="off">
                     <div>
                         <input type="text" value={this.state.todoTitle} onChange={this.todoTitleHandler} />
                         <button type="submit">
@@ -60,7 +61,7 @@ export default class TodoList extends Component {
                         <List {...todo} />
                     ))}
                 </div>
-            </div>
+            </>
         )
     }
 }

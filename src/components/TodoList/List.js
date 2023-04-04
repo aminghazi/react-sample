@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import { FaCheck, FaRecycle } from "react-icons/fa";
+import { FaCheck, FaClosedCaptioning } from "react-icons/fa";
 
 export default class List extends Component {
     render() {
         return (
             <div>
-                <h6>{this.props.title}</h6>
+                <b>{this.props.title}</b>
                 <button>
                     <FaCheck/>
                 </button>
                 <button>
-                    <FaRecycle/>
+                    <FaClosedCaptioning/>
                 </button>
             </div>
         )
