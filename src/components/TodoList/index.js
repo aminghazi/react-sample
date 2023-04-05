@@ -16,6 +16,7 @@ export default class TodoList extends Component {
         this.todoTitleHandler = this.todoTitleHandler.bind(this)
         this.addTodo = this.addTodo.bind(this)
         this.removeTodo = this.removeTodo.bind(this)
+        this.editTodo = this.editTodo.bind(this)
     }
 
     todoTitleHandler(event) {
@@ -49,6 +50,20 @@ export default class TodoList extends Component {
         })
     }
 
+    editTodo(id) {
+        let newTodo = [...this.state.todos]
+        
+        newTodo.forEach(t => {
+            if (t.id === id) {
+                t.completed = !t.completed
+            }
+        })
+
+        this.setState({
+            todos: newTodo
+        })
+    }
+
     render() {
         return (
             <>
@@ -68,7 +83,7 @@ export default class TodoList extends Component {
                 </form>
                 <div className="Todolist-list">
                     {this.state.todos.map(todo => (
-                        <List {...todo} onRemove={this.removeTodo} />
+                        <List {...todo} onRemove={this.removeTodo} onEdit={this.editTodo} />
                     ))}
                 </div>
             </>

@@ -8,11 +8,15 @@ export default class List extends Component {
         this.props.onRemove(id)
     }
 
+    editClickHandler(id) {
+        this.props.onEdit(id)
+    }
+
     render() {
         return (
             <div className={`${this.props.completed ? 'completed' : ''}`}>
                 <b>{this.props.title}</b>
-                <button className="btn-icon">
+                <button className="btn-icon" onClick={this.editClickHandler.bind(this, this.props.id)}>
                     <FaCheck/>
                 </button>
                 <button className="btn-icon" onClick={this.removeClickHandler.bind(this, this.props.id)}>
