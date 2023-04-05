@@ -1,16 +1,22 @@
 import React, { Component } from 'react'
-import { FaCheck, FaClosedCaptioning } from "react-icons/fa";
+import { FaCheck, FaTimesCircle } from "react-icons/fa";
+import './index.css'
 
 export default class List extends Component {
+
+    removeClickHandler(id) {
+        this.props.onRemove(id)
+    }
+
     render() {
         return (
-            <div>
+            <div className={`${this.props.completed ? 'completed' : ''}`}>
                 <b>{this.props.title}</b>
-                <button>
+                <button className="btn-icon">
                     <FaCheck/>
                 </button>
-                <button>
-                    <FaClosedCaptioning/>
+                <button className="btn-icon" onClick={this.removeClickHandler.bind(this, this.props.id)}>
+                    <FaTimesCircle/>
                 </button>
             </div>
         )

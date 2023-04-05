@@ -15,6 +15,7 @@ export default class TodoList extends Component {
 
         this.todoTitleHandler = this.todoTitleHandler.bind(this)
         this.addTodo = this.addTodo.bind(this)
+        this.removeTodo = this.removeTodo.bind(this)
     }
 
     todoTitleHandler(event) {
@@ -34,8 +35,17 @@ export default class TodoList extends Component {
 
         this.setState(prevState => {
             return {
-                todos: [...this.state.todos, newTodo]
+                todos: [...this.state.todos, newTodo],
+                todoTitle: ""
             }
+        })
+    }
+
+    removeTodo(id) {
+        let newTodo = this.state.todos.filter(t => t.id !== id)
+
+        this.setState({
+            todos: newTodo
         })
     }
 
@@ -58,7 +68,7 @@ export default class TodoList extends Component {
                 </form>
                 <div className="Todolist-list">
                     {this.state.todos.map(todo => (
-                        <List {...todo} />
+                        <List {...todo} onRemove={this.removeTodo} />
                     ))}
                 </div>
             </>
