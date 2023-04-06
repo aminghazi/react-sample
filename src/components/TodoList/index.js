@@ -17,6 +17,7 @@ export default class TodoList extends Component {
         this.addTodo = this.addTodo.bind(this)
         this.removeTodo = this.removeTodo.bind(this)
         this.editTodo = this.editTodo.bind(this)
+        this.statusHandler = this.statusHandler.bind(this)
     }
 
     todoTitleHandler(event) {
@@ -64,6 +65,12 @@ export default class TodoList extends Component {
         })
     }
 
+    statusHandler(event) {
+        this.setState({
+            status: event.target.value
+        })
+    }
+
     render() {
         return (
             <>
@@ -75,15 +82,21 @@ export default class TodoList extends Component {
                         </button>
                     </div>
                     <br/>
-                    <select>
+                    <select onChange={this.statusHandler}>
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">unCompleted</option>
                     </select>
                 </form>
                 <div className="Todolist-list">
-                    {this.state.todos.map(todo => (
-                        <List {...todo} onRemove={this.removeTodo} onEdit={this.editTodo} />
+                    {this.state.status === "completed" && this.state.todos.filter(todo => todo.completed).map(todo => (
+                        <List key={todo.id} {...todo} onRemove={this.removeTodo} onEdit={this.editTodo} />
+                    ))}
+                    {this.state.status === "uncompleted" && this.state.todos.filter(todo => !todo.completed).map(todo => (
+                        <List key={todo.id} {...todo} onRemove={this.removeTodo} onEdit={this.editTodo} />
+                    ))}
+                    {this.state.status === "all" && this.state.todos.map(todo => (
+                        <List key={todo.id} {...todo} onRemove={this.removeTodo} onEdit={this.editTodo} />
                     ))}
                 </div>
             </>
