@@ -28,6 +28,7 @@ export default class Note extends Component {
         this.inputColorHandler = this.inputColorHandler.bind(this)
         this.resetNoteTitle = this.resetNoteTitle.bind(this)
         this.addNote = this.addNote.bind(this)
+        this.removeNote = this.removeNote.bind(this)
     }
 
     noteTitleHandler(event) {
@@ -65,6 +66,26 @@ export default class Note extends Component {
         })
     }
 
+    removeNote(id) {
+        let newNote = [...this.state.notes]
+
+        // findIndex
+
+        // let noteIndex = newNote.findIndex(n => {
+        //     return n.id === id
+        // })
+        // newNote.splice(noteIndex, 1)
+
+
+        // filter
+        let noteIndex = newNote.filter(n => n.id !== id)
+
+        this.setState({
+            // notes: newNote
+            notes: noteIndex
+        })
+    }
+
     render() {
         return (
             <div className='Note-content'>
@@ -79,7 +100,7 @@ export default class Note extends Component {
                     <button onClick={this.resetNoteTitle}><FaEdit /></button>
                 </div>
                 <div className='Note-list'>
-                    {this.state.notes.map(n => <List key={n} {...n} />)}
+                    {this.state.notes.map(n => <List key={n.id} {...n} onRemove={this.removeNote} />)}
                 </div>
             </div>
         )
