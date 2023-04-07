@@ -42,6 +42,9 @@ const Layout = () => {
             <li>
               <Link to="/todoList">TodoList</Link>
             </li>
+            <li>
+              <Link to="/note">Note</Link>
+            </li>
           </ul>
         </nav>
 

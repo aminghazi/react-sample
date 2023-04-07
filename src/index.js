@@ -18,6 +18,7 @@ import MethodAsProps from './pages/MethodAsProps';
 import Table from './pages/Table';
 import Cart from './pages/Cart';
 import TodoList from './pages/TodoList';
+import Note from './pages/Note';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -39,6 +40,7 @@ root.render(
         <Route path="table" element={<Table />} />
         <Route path="cart" element={<Cart />} />
         <Route path="todolist" element={<TodoList />} />
+        <Route path="note" element={<Note />} />
       </Route>
     </Routes>
   </Router>
