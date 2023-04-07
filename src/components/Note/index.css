@@ -35,3 +35,15 @@
 button {
     margin: 0 5px;
 }
+
+.Note-list {
+    margin: 10px 0 15px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+.Note-item {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+}

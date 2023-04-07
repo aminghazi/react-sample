@@ -27,6 +27,7 @@ export default class Note extends Component {
         this.noteTitleHandler = this.noteTitleHandler.bind(this)
         this.inputColorHandler = this.inputColorHandler.bind(this)
         this.resetNoteTitle = this.resetNoteTitle.bind(this)
+        this.addNote = this.addNote.bind(this)
     }
 
     noteTitleHandler(event) {
@@ -48,6 +49,22 @@ export default class Note extends Component {
         })
     }
 
+    addNote() {
+        let newNote = {
+            id: this.state.notes.length + 1,
+            title: this.state.noteTitle,
+            color: this.state.inputColor
+        }
+
+        this.setState(prevState => {
+            return {
+                notes: [...prevState.notes, newNote],
+                inputColor: "#fff",
+                noteTitle: ""
+            }
+        })
+    }
+
     render() {
         return (
             <div className='Note-content'>
@@ -58,10 +75,12 @@ export default class Note extends Component {
                     </div>
                 </div>
                 <div>
-                    <button>Add</button>
+                    <button onClick={this.addNote}>Add</button>
                     <button onClick={this.resetNoteTitle}><FaEdit /></button>
                 </div>
-                <List />
+                <div className='Note-list'>
+                    {this.state.notes.map(n => <List key={n} {...n} />)}
+                </div>
             </div>
         )
     }
