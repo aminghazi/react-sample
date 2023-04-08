@@ -13,13 +13,14 @@ export default class List extends Component {
     }
 
     render() {
+        let { id, title, completed } = this.props
         return (
-            <div className={`${this.props.completed ? 'completed' : ''}`}>
-                <b>{this.props.title}</b>
-                <button className="btn-icon" onClick={this.editClickHandler.bind(this, this.props.id)}>
+            <div className={`${completed ? 'completed' : ''}`}>
+                <b>{title}</b>
+                <button className="btn-icon" onClick={this.editClickHandler.bind(this, id)}>
                     <FaCheck/>
                 </button>
-                <button className="btn-icon" onClick={this.removeClickHandler.bind(this, this.props.id)}>
+                <button className="btn-icon" onClick={this.removeClickHandler.bind(this, id)}>
                     <FaTimesCircle/>
                 </button>
             </div>

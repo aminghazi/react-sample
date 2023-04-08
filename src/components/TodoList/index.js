@@ -37,7 +37,7 @@ export default class TodoList extends Component {
 
         this.setState(prevState => {
             return {
-                todos: [...this.state.todos, newTodo],
+                todos: [...prevState.todos, newTodo],
                 todoTitle: ""
             }
         })
