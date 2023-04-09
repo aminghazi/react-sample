@@ -8,10 +8,11 @@ export default class Item extends Component {
     }
 
     render() {
+        let { id, name } = this.props;
         return (
             <div>
-                <button onClick={this.removeItem.bind(this, this.props.id)}>clear</button>
-                <span>{this.props.name}</span>
+                <button onClick={this.removeItem.bind(this, id)}>clear</button>
+                <span>{name}</span>
             </div>
         )
     }
