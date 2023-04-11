@@ -19,6 +19,7 @@ import Table from './pages/Table';
 import Cart from './pages/Cart';
 import TodoList from './pages/TodoList';
 import Note from './pages/Note';
+import CallBack from './pages/CallBack';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -41,6 +42,7 @@ root.render(
         <Route path="cart" element={<Cart />} />
         <Route path="todolist" element={<TodoList />} />
         <Route path="note" element={<Note />} />
+        <Route path="callBack" element={<CallBack />} />
       </Route>
     </Routes>
   </Router>

@@ -45,6 +45,9 @@ const Layout = () => {
             <li>
               <Link to="/note">Note</Link>
             </li>
+            <li>
+              <Link to="/callBack">CallBack</Link>
+            </li>
           </ul>
         </nav>
 
