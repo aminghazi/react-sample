@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Add from './Add'
+import FetchTable from './FetchTable'
 import './index.css'
 
 export default class Table extends Component {
@@ -7,6 +8,7 @@ export default class Table extends Component {
         return (
             <div className="Table-content">
                 <Add />
+                <FetchTable />
             </div>
         )
     }
