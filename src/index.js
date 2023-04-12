@@ -18,6 +18,7 @@ import MethodAsProps from './pages/MethodAsProps';
 import Table from './pages/Table';
 import Cart from './pages/Cart';
 import TodoList from './pages/TodoList';
+import TodoListFunction from './pages/TodoListFunction';
 import Note from './pages/Note';
 import CallBack from './pages/CallBack';
 import Layout from './pages/Layout';
@@ -41,6 +42,7 @@ root.render(
         <Route path="table" element={<Table />} />
         <Route path="cart" element={<Cart />} />
         <Route path="todolist" element={<TodoList />} />
+        <Route path="todolist-function" element={<TodoListFunction />} />
         <Route path="note" element={<Note />} />
         <Route path="callBack" element={<CallBack />} />
       </Route>

@@ -1,0 +1,18 @@
+.Todolist-list {
+    margin-top: 30px;
+}
+
+.Todolist-list >div {
+    padding: 10px 0;
+}
+
+.Todolist-list .completed {
+    background-color: #ebebeb;
+}
+
+.btn-icon {
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 5px;
+    color: #ffffff;
+}
