@@ -9,10 +9,10 @@ export default class Cart extends Component {
 
         this.state = {
             products: [
-                {id: 1, title: "product 1", price: "1000000", image: "https://fastly.picsum.photos/id/98/200/200.jpg?hmac=QiHfqn1VEz1-KB7Wpb5iUbtrmTV8s2e3DJFb4HEp-y0"},
-                {id: 2, title: "product 2", price: "1200000", image: "https://fastly.picsum.photos/id/223/200/200.jpg?hmac=CNNyWbBcEAJ7TPkTmEEwdGrLFEYkxpTeVwJ7U0LB30Y"},
-                {id: 3, title: "product 3", price: "900000", image: "https://fastly.picsum.photos/id/343/200/200.jpg?hmac=51jfTxjhIC4eQHibl9fcu56Q5VlXZxJLdHsbgsGd_zE"},
-                {id: 4, title: "product 4", price: "1950000", image: "https://fastly.picsum.photos/id/242/200/200.jpg?hmac=Z3aa8zbEQkEMFgnVh0Pn96vmCZHhJ17qzCrePYksrcY"}
+                {id: 1, title: "product 1", price: "1000000", image: "https://placehold.co/200"},
+                {id: 2, title: "product 2", price: "1200000", image: "https://placehold.co/200"},
+                {id: 3, title: "product 3", price: "900000", image: "https://placehold.co/200"},
+                {id: 4, title: "product 4", price: "1950000", image: "https://placehold.co/200"}
             ],
             shoppingCart: [],
         }
@@ -25,11 +25,11 @@ export default class Cart extends Component {
     addToCart(id) {
         let addProduct = this.state.products.find(p => p.id === id)
 
-        let uniqueProduct = this.state.addProduct.filter(p => {
-            return this.state.shoppingCart.indexOf(p.id) === p
-        })
+        // let uniqueProduct = this.state.addProduct.filter(p => {
+        //     return this.state.shoppingCart.indexOf(p.id) === p
+        // })
 
-        console.log("uniqueProduct", uniqueProduct)
+        // console.log("uniqueProduct", uniqueProduct)
 
         this.setState(prevState => { 
             console.log("prevState", prevState.indexOf)

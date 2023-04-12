@@ -40,6 +40,9 @@ const Layout = () => {
               <Link to="/cart">Cart</Link>
             </li>
             <li>
+              <Link to="/cart-function">Cart Function</Link>
+            </li>
+            <li>
               <Link to="/todolist">TodoList</Link>
             </li>
             <li>

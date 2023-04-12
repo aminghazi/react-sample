@@ -17,6 +17,7 @@ import Select from './pages/Select';
 import MethodAsProps from './pages/MethodAsProps';
 import Table from './pages/Table';
 import Cart from './pages/Cart';
+import CartFunction from './pages/CartFunction';
 import TodoList from './pages/TodoList';
 import TodoListFunction from './pages/TodoListFunction';
 import Note from './pages/Note';
@@ -41,6 +42,7 @@ root.render(
         <Route path="method-as-props" element={<MethodAsProps />} />
         <Route path="table" element={<Table />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="cart-function" element={<CartFunction />} />
         <Route path="todolist" element={<TodoList />} />
         <Route path="todolist-function" element={<TodoListFunction />} />
         <Route path="note" element={<Note />} />

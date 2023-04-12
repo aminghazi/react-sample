@@ -1,0 +1,32 @@
+.Cart-content {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.Products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.Products-item {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Cart-list {
+    display: grid;
+    gap: 20px;
+}
+
+.Cart-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
