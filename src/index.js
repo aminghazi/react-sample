@@ -22,6 +22,7 @@ import TodoList from './pages/TodoList';
 import TodoListFunction from './pages/TodoListFunction';
 import Note from './pages/Note';
 import CallBack from './pages/CallBack';
+import Lifecycle from './pages/Lifecycle';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -46,7 +47,8 @@ root.render(
         <Route path="todolist" element={<TodoList />} />
         <Route path="todolist-function" element={<TodoListFunction />} />
         <Route path="note" element={<Note />} />
-        <Route path="callBack" element={<CallBack />} />
+        <Route path="callback" element={<CallBack />} />
+        <Route path="lifecycle" element={<Lifecycle />} />
       </Route>
     </Routes>
   </Router>

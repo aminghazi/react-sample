@@ -52,7 +52,10 @@ const Layout = () => {
               <Link to="/note">Note</Link>
             </li>
             <li>
-              <Link to="/callBack">CallBack</Link>
+              <Link to="/callback">CallBack</Link>
+            </li>
+            <li>
+              <Link to="/lifecycle">Lifecycle</Link>
             </li>
           </ul>
         </nav>
