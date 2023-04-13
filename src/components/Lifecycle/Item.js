@@ -10,7 +10,7 @@ export default function Item(props) {
             console.log("Component Will Unmount")
         }
     }, [])
-
+    
     const clickHandler = (id) => {
         props.onRemove(id)
     }

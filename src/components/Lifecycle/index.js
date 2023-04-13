@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Item from './Item'
+import './index.css'
 
 export default function Lifecycle() {
 
@@ -47,7 +48,7 @@ export default function Lifecycle() {
                 <small>{count}</small>
                 <button onClick={minusCount}>Minus</button>
             </div>
-            {items && <ul>
+            {items && <ul className='Lifecycle-list'>
                 {items.map(i => <Item {...i} onRemove={removeHandler} />)}
             </ul>
             }

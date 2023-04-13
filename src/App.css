@@ -59,6 +59,10 @@ nav ul li a {
   font-size: 18px;
 }
 
+ul {
+  list-style: none;
+}
+
 button {
   background-color: #61dafb;
   border: none;
