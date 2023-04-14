@@ -1,8 +1,9 @@
 import logo from '../logo.svg';
 import '../App.css';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useParams } from "react-router-dom";
 
 const Layout = () => {
+  let params = useParams()
   return (
     <div className="App">
       <header className="App-header">
@@ -15,11 +16,14 @@ const Layout = () => {
             <li>
               <Link to="/">Back to Home</Link>
             </li>
-            
+            {params.id && <li>
+              <Link to="/params">Back to Params</Link>
+            </li>}
           </ul>
         </nav>
 
         <Outlet />
+        
       </main>
     </div>
   )
