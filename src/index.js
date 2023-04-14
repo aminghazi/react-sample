@@ -26,6 +26,7 @@ import Lifecycle from './pages/Lifecycle';
 import Params from './pages/Params';
 import ParamsItem from './pages/ParamsItem';
 import Layout from './pages/Layout';
+import NotFound from './pages/NotFound';
 import LayoutRoot from './pages/LayoutRoot';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -53,6 +54,7 @@ root.render(
         <Route path="lifecycle" element={<Lifecycle />} />
         <Route path="params" element={<Params />} />
         <Route path="params/:id" element={<ParamsItem />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   </Router>
