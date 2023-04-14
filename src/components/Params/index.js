@@ -9,7 +9,7 @@ export default function Params() {
     return (
         <div>
             {items.map(i => (
-                <div><Link to={`/params/${i.id}`}>{i.name}</Link></div>
+                <div key={i.id}><Link to={`/params/${i.id}`}>{i.name}</Link></div>
             ))}
         </div>
     )
