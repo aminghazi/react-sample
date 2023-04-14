@@ -24,7 +24,7 @@ import Note from './pages/Note';
 import CallBack from './pages/CallBack';
 import Lifecycle from './pages/Lifecycle';
 import Params from './pages/Params';
-import Item from './pages/Params/Item';
+import ParamsItem from './pages/ParamsItem';
 import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
@@ -52,7 +52,7 @@ root.render(
         <Route path="callback" element={<CallBack />} />
         <Route path="lifecycle" element={<Lifecycle />} />
         <Route path="params" element={<Params />} />
-        <Route path="params/:id" element={<Item />} />
+        <Route path="params/:id" element={<ParamsItem />} />
       </Route>
     </Routes>
   </Router>

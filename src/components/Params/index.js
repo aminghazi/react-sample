@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-// import { Link } from 'react-router-dom'
-import data from './Data'
+import { Link } from 'react-router-dom'
+import itemsData from './Data'
 
 export default function Params() {
 
-    const [items, setItems] = useState[data]
-    console.log(items)
+    const [items, setItems] = useState(itemsData)
+    
     return (
         <div>
-            {/* {items.map(i => (
-                <Link to={`/params/${i.id}`}>{i.name}</Link>
-            ))} */}
+            {items.map(i => (
+                <div><Link to={`/params/${i.id}`}>{i.name}</Link></div>
+            ))}
         </div>
     )
 }
