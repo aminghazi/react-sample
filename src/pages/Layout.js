@@ -57,6 +57,9 @@ const Layout = () => {
             <li>
               <Link to="/lifecycle">Lifecycle</Link>
             </li>
+            <li>
+              <Link to="/params">Params</Link>
+            </li>
           </ul>
         </nav>
 
