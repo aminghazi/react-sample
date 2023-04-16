@@ -1,6 +1,6 @@
 import logo from '../logo.svg';
 import '../App.css';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 const Layout = () => {
   return (
@@ -13,62 +13,61 @@ const Layout = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/counter">Counter</Link>
+              <NavLink to="/counter" className={(link)=>link.isActive?"active":""}>Counter</NavLink>
             </li>
             <li>
-              <Link to="/event">Event</Link>
+              <NavLink to="/event">Event</NavLink>
             </li>
             <li>
-              <Link to="/notification-counter">Notification Counter</Link>
+              <NavLink to="/notification-counter">Notification Counter</NavLink>
             </li>
             <li>
-              <Link to="/form">Form</Link>
+              <NavLink to="/form">Form</NavLink>
             </li>
             <li>
-              <Link to="/quiz">Quiz</Link>
+              <NavLink to="/quiz">Quiz</NavLink>
             </li>
             <li>
-              <Link to="/select">Select</Link>
+              <NavLink to="/select">Select</NavLink>
             </li>
             <li>
-              <Link to="/method-as-props">Method As Props</Link>
+              <NavLink to="/method-as-props">Method As Props</NavLink>
             </li>
             <li>
-              <Link to="/table">Table</Link>
+              <NavLink to="/table">Table</NavLink>
             </li>
             <li>
-              <Link to="/cart">Cart</Link>
+              <NavLink to="/cart">Cart</NavLink>
             </li>
             <li>
-              <Link to="/cart-function">Cart Function</Link>
+              <NavLink to="/cart-function">Cart Function</NavLink>
             </li>
             <li>
-              <Link to="/todolist">TodoList</Link>
+              <NavLink to="/todolist">TodoList</NavLink>
             </li>
             <li>
-              <Link to="/todolist-function">TodoList Function</Link>
+              <NavLink to="/todolist-function">TodoList Function</NavLink>
             </li>
             <li>
-              <Link to="/note">Note</Link>
+              <NavLink to="/note">Note</NavLink>
             </li>
             <li>
-              <Link to="/callback">CallBack</Link>
+              <NavLink to="/callback">CallBack</NavLink>
             </li>
             <li>
-              <Link to="/lifecycle">Lifecycle</Link>
+              <NavLink to="/lifecycle">Lifecycle</NavLink>
             </li>
             <li>
-              <Link to="/params">Params</Link>
+              <NavLink to="/params">Params</NavLink>
             </li>
             <li>
-              <Link to="/outlet">Outlet</Link>
+              <NavLink to="/outlet">Outlet</NavLink>
             </li>
             <li>
-              <Link to="/permission-root">Permission Root</Link>
+              <NavLink to="/permission-root">Permission Root</NavLink>
             </li>
           </ul>
         </nav>
-
         <Outlet />
       </main>
     </div>

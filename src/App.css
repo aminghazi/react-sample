@@ -91,3 +91,8 @@ button:hover {
 .gray-bg {
   background-color: #d2d2d2;
 }
+
+.active {
+  background-color: #60dafb;
+  padding: 5px;
+}
