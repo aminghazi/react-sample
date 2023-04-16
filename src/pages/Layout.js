@@ -63,6 +63,9 @@ const Layout = () => {
             <li>
               <Link to="/outlet">Outlet</Link>
             </li>
+            <li>
+              <Link to="/permission-root">Permission Root</Link>
+            </li>
           </ul>
         </nav>
 

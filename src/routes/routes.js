@@ -19,7 +19,12 @@ import ParamsItem from '../pages/ParamsItem';
 import NotFound from '../pages/NotFound';
 import Outlet from '../pages/Outlet';
 import Layout from '../pages/Layout';
+import PermissionRoot from '../pages/PermissionRoot';
 import LayoutRoot from '../pages/LayoutRoot';
+import PrivateRoute from '../components/PrivateRoute/PrivateRoute';
+import NoPermission from '../components/PermissionRoot/NoPermission';
+import Admin from '../components/PermissionRoot/Admin/Admin';
+import Report from '../components/PermissionRoot/Report/Report';
 
 
 export default function Router() {
@@ -46,9 +51,17 @@ export default function Router() {
                 { path: "params/:id", element: <ParamsItem />},
                 { path: "*", element: <NotFound />},
                 { path: "outlet", element: <Outlet />, children: [
-                    { path: "outlet-root1", element: <div>content "root 1"</div>},
-                    { path: "outlet-root2", element: <div>content "root 2"</div>},
-                ]},
+                        { path: "outlet-root1", element: <div>content "root 1"</div>},
+                        { path: "outlet-root2", element: <div>content "root 2"</div>},
+                    ]
+                },
+                { path: "permission-root", element: <PermissionRoot />},
+                { path: "no-permission", element: <NoPermission />},
+                { path: "/*", element: <PrivateRoute/>, children: [
+                        { path: "admin", element: <Admin />},
+                        { path: "report", element: <Report />},
+                    ]
+                },
             ]
         },
     ]);
