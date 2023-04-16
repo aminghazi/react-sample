@@ -60,6 +60,9 @@ const Layout = () => {
             <li>
               <Link to="/params">Params</Link>
             </li>
+            <li>
+              <Link to="/outlet">Outlet</Link>
+            </li>
           </ul>
         </nav>
 

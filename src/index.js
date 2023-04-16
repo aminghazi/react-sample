@@ -25,8 +25,9 @@ import CallBack from './pages/CallBack';
 import Lifecycle from './pages/Lifecycle';
 import Params from './pages/Params';
 import ParamsItem from './pages/ParamsItem';
-import Layout from './pages/Layout';
 import NotFound from './pages/NotFound';
+import Outlet from './pages/Outlet';
+import Layout from './pages/Layout';
 import LayoutRoot from './pages/LayoutRoot';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,6 +56,10 @@ root.render(
         <Route path="params" element={<Params />} />
         <Route path="params/:id" element={<ParamsItem />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="outlet/*" element={<Outlet />}>
+          <Route path="outlet-root1" element={<div>content "root 1"</div>} />
+          <Route path="outlet-root2" element={<div>content "root 2"</div>} />
+        </Route>
       </Route>
     </Routes>
   </Router>
