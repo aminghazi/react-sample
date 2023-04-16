@@ -1,18 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
+import Router from './routes/routes';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <code className="App-title">React Sample Code</code>
-      </header>
-      <main>
-
-      </main>
-    </div>
-  );
+  return (<Router/>);
 }
 
 export default App;
