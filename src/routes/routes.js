@@ -25,6 +25,7 @@ import PrivateRoute from '../components/PrivateRoute/PrivateRoute';
 import NoPermission from '../components/PermissionRoot/NoPermission';
 import Admin from '../components/PermissionRoot/Admin/Admin';
 import Report from '../components/PermissionRoot/Report/Report';
+import CustomHook from '../pages/CustomHook';
 
 
 export default function Router() {
@@ -58,10 +59,11 @@ export default function Router() {
                 { path: "permission-root", element: <PermissionRoot />},
                 { path: "no-permission", element: <NoPermission />},
                 { path: "/*", element: <PrivateRoute/>, children: [
-                        { path: "admin", element: <Admin />},
+                    { path: "admin", element: <Admin />},
                         { path: "report", element: <Report />},
                     ]
                 },
+                { path: "custom-hook", element: <CustomHook />},
             ]
         },
     ]);

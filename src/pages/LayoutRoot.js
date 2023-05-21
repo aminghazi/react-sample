@@ -67,6 +67,9 @@ const Layout = () => {
             <li>
               <NavLink to="/permission-root">Permission Root</NavLink>
             </li>
+            <li>
+              <NavLink to="/custom-hook">Custom Hook</NavLink>
+            </li>
           </ul>
         </nav>
 

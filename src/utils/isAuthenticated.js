@@ -1,5 +1,5 @@
-const isAuthenticated = (usename) => {
-    if (usename === "amin") {
+const isAuthenticated = (username) => {
+    if (username === "amin") {
         return true
     }
     return false

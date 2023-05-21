@@ -1,7 +1,7 @@
 import CustomHook from "../components/CustomHook"
 
-const CustomHookPage = () => {
+const CartPage = () => {
   return <CustomHook />;
 };
 
-export default CustomHookPage;
+export default CartPage;

@@ -6,7 +6,6 @@ export default function OutletRoot() {
 
   let navigate = useNavigate()
 
-
   let location = useLocation()
   // gets some properties from url (hash, key, pathname, search, ...)
   console.log("location", location)
