@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { FaPlus } from "react-icons/fa";
 import './index.css'
 import List from './List';
+import TodoTwo from './TodoTwo';
+import TodoThree from './TodoThree';
 
 export default class TodoList extends Component {
 
@@ -99,6 +101,14 @@ export default class TodoList extends Component {
                         <List key={todo.id} {...todo} onRemove={this.removeTodo} onEdit={this.editTodo} />
                     ))}
                 </div>
+
+                <br/>
+
+                <TodoTwo />
+                
+                <br/>
+                
+                <TodoThree />
             </>
         )
     }
