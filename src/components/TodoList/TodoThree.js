@@ -5,15 +5,20 @@ const TodoThree = () => {
   const [todos, setTodos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [sortBy, setSortBy] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchTodos();
-  }, [currentPage]);
+  }, [currentPage, sortBy]);
 
   const fetchTodos = async () => {
+    setLoading(true);
     try {
       const response = await axios.get(
-        `https://jsonplaceholder.typicode.com/todos?_page=${currentPage}&_limit=10`
+        `https://jsonplaceholder.typicode.com/todos?_page=${currentPage}&_limit=10${
+          sortBy ? `&_sort=${sortBy}` : ''
+        }`
       );
       setTodos(response.data);
       const totalCount = response.headers['x-total-count'];
@@ -21,11 +26,17 @@ const TodoThree = () => {
       setTotalPages(totalPages);
     } catch (error) {
       console.error('Error fetching todos:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
   const handlePageClick = (page) => {
     setCurrentPage(page);
+  };
+
+  const handleSortChange = (e) => {
+    setSortBy(e.target.value);
   };
 
   const renderPageNumbers = () => {
@@ -47,11 +58,25 @@ const TodoThree = () => {
   return (
     <div>
       <h1>Todos</h1>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+      <div>
+        <label>
+          Sort by:
+          <select value={sortBy} onChange={handleSortChange}>
+            <option value="">None</option>
+            <option value="title">Title</option>
+            <option value="id">ID</option>
+          </select>
+        </label>
+      </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {todos.map((todo) => (
+            <li key={todo.id}>{todo.title}</li>
+          ))}
+        </ul>
+      )}
       <div>
         {renderPageNumbers()}
       </div>
